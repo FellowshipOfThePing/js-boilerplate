@@ -1,0 +1,10 @@
+node_modules
+build
+package-lock.json
+.DS_Store
+.eslintcache
+yarn-error.log
+.vercel
+.env
+/coverage
+/api/test.js

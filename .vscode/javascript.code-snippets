@@ -1,0 +1,124 @@
+{
+	"Functional Component": {
+		"prefix": "func",
+		"body": [
+			"import React from \"react\";",
+			"",
+			"const ${1} = () => {",
+			"\treturn (",
+			"\t\t<div>",
+			"\t\t\t<div><\/div>",
+			"\t\t<\/div>",
+			"\t);",
+			"};",
+			"",
+			"export default ${1};",
+			""
+			],
+		"description": "React Functional Component"
+  	},
+	"React Page Component": {
+		"prefix": "page",
+		"body": [
+			"import React from \"react\";",
+			"import { withRouter } from \"react-router-dom\";",
+			"",
+			"const ${TM_FILENAME_BASE:default} = withRouter(({ match, history, location }) => {",
+			"\t// useContext",
+			"\t${1}",
+			"\t// useRef / useState",
+			"",
+			"\t// Custom/Package hooks",
+			"",
+			"\t// SWR Data Hooks",
+			"",
+			"\t// useEffect",
+			"",
+			"\t// Request/Mutation Functions",
+			"",
+			"\t// Event Handler Functions",
+			"",
+			"\t// Key Commands (useHotKeys)",
+			"",
+			"\t// CommandK Functions",
+			"",
+			"\treturn (",
+			"\t\t<div>",
+			"\t\t\t<div><\/div>",
+			"\t\t<\/div>",
+			"\t);",
+			"});",
+			"",
+			"export default ${TM_FILENAME_BASE:default};",
+			""
+			],
+		"description": "React Functional Component"
+  	},
+	"useEffect Hook": {
+		"prefix": "ue",
+		"body": [
+			"useEffect(() => {",
+			"\t",
+			"}, [${1}]);"
+			],
+		"description": "React Use Effect Hook with No Deps"
+  	},
+	"useEffect with console.log": {
+		"prefix": "uec",
+		"body": [
+			"useEffect(() => {",
+			"\tconsole.log(${1})",
+			"}, [${1}]);"
+			],
+		"description": "React Use Effect Hook with console.log statement ready"
+  	},
+	"useState Hook": {
+		"prefix": "us",
+		"body": [
+			"const [${1}, ${1}] = useState(null);"
+			],
+		"description": "React Use State Hook"
+  	},
+	"useRef Hook": {
+		"prefix": "ur",
+		"body": [
+			"let ${1}Ref = useRef(null);"
+			],
+		"description": "React Use Ref Hook"
+  	},
+	"Index Based For Loop": {
+		"prefix": "for",
+		"body": [
+			"for (let i = 0; i < ${1}.length; i++) {",
+			"",
+			"}"
+		],
+		"description": "Index-based for loop"
+	},
+	"Context + Wrapper Template": {
+		"prefix": "context",
+		"body": [
+			"import React, { useContext } from \"react\";",
+			"",
+			"const ${1}Context = React.createContext();",
+			"",
+			"const ${1}ContextWrapper = ({ children }) => {",
+			"\treturn (",
+			"\t\t<${1}Context.Provider value={{}}>{children}</${1}Context.Provider>",
+			"\t);",
+			"};",
+			"",
+			"const use${1}Context = () => useContext(${1}Context);",
+			"",
+			"export { use${1}Context, ${1}ContextWrapper };",
+		],
+		"description": "Context + Wrapper Template"
+	},
+	"Index file export": {
+		"prefix": "index",
+		"body": [
+			"export { default as ${1} } from \"./${1}\";"
+		],
+		"description": "Index-based for loop"
+	}
+}

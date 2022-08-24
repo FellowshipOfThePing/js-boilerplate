@@ -44,5 +44,8 @@ downloadfile "package.json"
 
 # Prompt user
 echo "";
-echo -e "${ql_green}=> Download succeeded.${ql_no_color}";
+echo -e "${ql_green}=> File Download succeeded.${ql_no_color}";
 echo "";
+
+# Install Yarn Packages
+yarn

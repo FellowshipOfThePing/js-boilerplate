@@ -1,6 +1,13 @@
 <h1 align="center">JS-Boilerplate</h1>
 <p align="center">Personal JS-Project template, with preferred eslint/pretter settings pre-configured</p>
 
+## ⚡️ Installation
+
+1. Run this command in your terminal to install the relevant template files in your current directory
+
+```bash
+curl -s -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/FellowshipOfThePing/js-boilerplate/master/install.sh | bash
+```
 
 ## Important Config Files
 

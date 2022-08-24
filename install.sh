@@ -8,11 +8,15 @@ ql_no_color='\033[0m'
 
 # Download file function
 downloadfile() {
-    if [ -f "./$1" ]; then
+    if [[ "$2" == "-f" ]]; then
+        prefix='https://raw.githubusercontent.com/FellowshipOfThePing/js-boilerplate/master/'
+        curl -s -H 'Cache-Control: no-cache' "${prefix}$1" > "./$1"
+        echo -e "${ql_cyan}=> Downloaded $1. ${ql_no_color}";
+    elif [ -f "./$1" ]; then
         echo "$1 already exists."
     else 
         prefix='https://raw.githubusercontent.com/FellowshipOfThePing/js-boilerplate/master/'
-        curl -s -H 'Cache-Control: no-cache' "${prefix}$1" --output "./$1"
+        curl -s -H 'Cache-Control: no-cache' "${prefix}$1" > "./$1"
         echo -e "${ql_cyan}=> Downloaded $1. ${ql_no_color}";
     fi    
 }
@@ -36,6 +40,7 @@ downloadfile ".prettierignore"
 downloadfile ".prettierrc"
 downloadfile "babel.config.js"
 downloadfile "CODEOWNERS"
+downloadfile "package.json"
 
 # Prompt user
 echo "";

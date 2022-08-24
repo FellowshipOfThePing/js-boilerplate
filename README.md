@@ -1,4 +1,4 @@
-<h1 align="center">Scaffold-JS</h1>
+<h1 align="center">JS-Boilerplate</h1>
 <p align="center">Personal JS-Project template, with preferred eslint/pretter settings pre-configured</p>
 
 

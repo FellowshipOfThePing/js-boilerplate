@@ -1,17 +1,17 @@
-// # List of all possible code owners:  
-// # @FellowshipOfThePing  
+# List of all possible code owners:  
+# @FellowshipOfThePing  
 
 
-// # Global code owners
-// * @FellowshipOfThePing  
+# Global code owners 
+* @FellowshipOfThePing  
 
 
-// # NOTE - Order is important; the last matching pattern takes precedence. 
+# NOTE - Order is important; the last matching pattern takes precedence. 
 
 
-// # Catch-all reviewers (any pattern-match further down will override these) 
-// *.js @FellowshipOfThePing  
+# Catch-all reviewers (any pattern-match further down will override these) 
+*.js @FellowshipOfThePing  
 
 
-// # Jeremy's files 
-// /...
+# Jeremy's files 
+# /...

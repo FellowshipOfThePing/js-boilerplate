@@ -1,4 +1,5 @@
 {
+	// React Snippets
 	"Functional Component": {
 		"prefix": "func",
 		"body": [
@@ -13,43 +14,6 @@
 			"};",
 			"",
 			"export default ${1};",
-			""
-			],
-		"description": "React Functional Component"
-  	},
-	"React Page Component": {
-		"prefix": "page",
-		"body": [
-			"import React from \"react\";",
-			"import { withRouter } from \"react-router-dom\";",
-			"",
-			"const ${TM_FILENAME_BASE:default} = withRouter(({ match, history, location }) => {",
-			"\t// useContext",
-			"\t${1}",
-			"\t// useRef / useState",
-			"",
-			"\t// Custom/Package hooks",
-			"",
-			"\t// SWR Data Hooks",
-			"",
-			"\t// useEffect",
-			"",
-			"\t// Request/Mutation Functions",
-			"",
-			"\t// Event Handler Functions",
-			"",
-			"\t// Key Commands (useHotKeys)",
-			"",
-			"\t// CommandK Functions",
-			"",
-			"\treturn (",
-			"\t\t<div>",
-			"\t\t\t<div><\/div>",
-			"\t\t<\/div>",
-			"\t);",
-			"});",
-			"",
-			"export default ${TM_FILENAME_BASE:default};",
 			""
 			],
 		"description": "React Functional Component"
@@ -75,9 +39,9 @@
 	"useState Hook": {
 		"prefix": "us",
 		"body": [
-			"const [${1}, ${1}] = useState(null);"
-			],
-		"description": "React Use State Hook"
+		  "const [${1}, set${1/(.*)/${1:/capitalize}/}] = useState(${2});"
+		  ],
+	  "description": "React Use State Hook press tab after typing to get the capitalization and fill in the state"
   	},
 	"useRef Hook": {
 		"prefix": "ur",
@@ -95,7 +59,7 @@
 		],
 		"description": "Index-based for loop"
 	},
-	"Context + Wrapper Template": {
+	"React Context + Wrapper Template": {
 		"prefix": "context",
 		"body": [
 			"import React, { useContext } from \"react\";",
@@ -119,6 +83,6 @@
 		"body": [
 			"export { default as ${1} } from \"./${1}\";"
 		],
-		"description": "Index-based for loop"
+		"description": "Re-Export Template (used in index.js files)"
 	}
 }

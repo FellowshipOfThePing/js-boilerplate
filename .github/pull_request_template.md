@@ -29,5 +29,6 @@
 <!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
 
 -   [ ] PR passes all tests and linters
--   [ ] My change requires a change to the documentation & I have updated the documentation accordingly
+-   [ ] My change(s) require(s) a change to the documentation
+-   [ ] I have updated the documentation accordingly
 -   [ ] I've added any new files to [CODEOWNERS](../CODEOWNERS)

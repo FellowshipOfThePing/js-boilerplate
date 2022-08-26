@@ -8,12 +8,13 @@ curl -s -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/Fellowshi
 ```
 
 1. Running this command in your terminal will...
-- Create a React App in your local directory
+- Init an npm module (if package.json is not already found)
 - Add template scripts to `package.json` (see [`addScripts.js`](./addScripts.js))
-- Add template files
+- Add template config files to root directory
 - Removes `package-lock.json` (we prefer `yarn` in this household)
 - Install template dependencies
 - Install remaining dependencies in `package.json`
+- Initialize a git repository (if not already found)
 
 
 ## ESLint Notes

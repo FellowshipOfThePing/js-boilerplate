@@ -25,7 +25,7 @@ promptUser() {
 # Create package.json if it doesn't exist
 if [ ! -f ./package.json ]; then
     npm init -y
-    promptUser "package.json Created"
+    promptUser "package.json created"
 else
     promptUser "package.json already exists"
 fi

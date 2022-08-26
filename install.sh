@@ -21,6 +21,20 @@ downloadfile() {
     fi    
 }
 
+promptUser() {
+    echo "";
+    echo -e "${ql_green}=> $1${ql_no_color}";
+    echo "";
+}
+
+# Create React App
+npx create-react-app .
+promptUser "CRA Succeeded"
+
+# Add template scripts to package.json
+node ./addScripts.js
+promptUser "Added Scripts to package.json"
+
 # Download github folder
 mkdir -p ./.github
 downloadfile ".github/pull_request_template.md"
@@ -40,12 +54,18 @@ downloadfile ".prettierignore"
 downloadfile ".prettierrc"
 downloadfile "babel.config.js"
 downloadfile "CODEOWNERS"
-downloadfile "package.json"
+promptUser "Successfully downloaded files"
 
-# Prompt user
-echo "";
-echo -e "${ql_green}=> File Download succeeded.${ql_no_color}";
-echo "";
+# Remove package-lock.json
+rm ./package-lock.json
+promptUser "Removed package-lock.json"
+
+# Add template dependencies to package.json
+yarn add babel-loader patch-package postinstall-postinstall react-router-dom
+yarn add -D @babel/preset-env @babel/preset-react eslint eslint-config-prettier eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react prettier
+promptUser "Installed template dependencies"
 
 # Install Yarn Packages
 yarn
+
+promptUser "Template download complete!"

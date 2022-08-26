@@ -22,7 +22,6 @@ downloadfile() {
 }
 
 promptUser() {
-    echo "";
     echo -e "${ql_green}=> $1${ql_no_color}";
     echo "";
 }

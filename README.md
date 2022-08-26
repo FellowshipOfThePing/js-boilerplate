@@ -3,27 +3,24 @@
 
 ## ⚡️ Installation
 
-1. Run this command in your terminal to install the relevant template files in your current directory
-
 ```bash
 curl -s -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/FellowshipOfThePing/js-boilerplate/master/install.sh | bash
 ```
 
-## Important Config Files
+1. Running this command in your terminal will...
+- Create a React App in your local directory
+- Add template scripts to `package.json` (see [`addScripts.js`](./addScripts.js))
+- Add template files
+- Removes `package-lock.json` (we prefer `yarn` in this household)
+- Install template dependencies
+- Install remaining dependencies in `package.json`
 
-- [`.eslintignore`](./.eslintignore) & [`.eslintrc.js`](./.eslintrc.js) - [ESLint](https://eslint.org) linting config
-- [`.prettierignore`](./.prettierignore) & [`.prettierrc`](./.prettierrc) - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) auto-formatting
-- [`package.json`](./package.json) & [`yarn.lock`](./yarn.lock) - Node module management
 
-
-## ESLint
-
-### Notes
-
-- VSCode is configured to auto-fix any linting errors on save. See settings [here](./.vscode/settings.json).
+## ESLint Notes
 
 ### Linting in VSCode
 
+- VSCode is configured to auto-fix any fixable linting errors on save. See settings [here](./.vscode/settings.json).
 - Open the command palette (`⌘` + `shift` + `P`) in VSCode
 - Select `Tasks: Run Task`
 - Select `eslint: lint whole folder`

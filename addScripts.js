@@ -8,8 +8,6 @@ let file = require(fileName);
 // Add scripts to json
 file.scripts = {
 	...file.scripts,
-	start: "react-scripts start",
-	build: "react-scripts --max_old_space_size=4096 build",
 	postinstall: "patch-package",
 	"style:prettier": "prettier --check '**/*.{js,jsx,ts,tsx}'",
 	"style:lint": "eslint '**/*.{js,jsx,ts,tsx}'",

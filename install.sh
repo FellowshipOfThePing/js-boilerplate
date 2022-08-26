@@ -69,4 +69,10 @@ promptUser "Installed template dependencies"
 # Install remaining Yarn packages
 yarn
 
+# Init git repo if doesn't already exist
+if [ -d ./.git ]; then
+    git init
+    promptUser "Initialized git repo"
+fi
+
 promptUser "Template download complete!"

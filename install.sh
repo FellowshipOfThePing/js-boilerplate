@@ -32,7 +32,7 @@ npx create-react-app .
 promptUser "CRA Succeeded"
 
 # Add template scripts to package.json
-node ./addScripts.js
+curl -s -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/FellowshipOfThePing/js-boilerplate/master/addScripts.js | node
 promptUser "Added Scripts to package.json"
 
 # Download github folder
